@@ -18,78 +18,83 @@ Partial Class Form1
     Private components As System.ComponentModel.IContainer
 
     'NOTE: The following procedure is required by the Windows Form Designer
-    'It can be modified using the Windows Form Designer.  
+    'It can be modified using the Windows Form Designer.
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
+        txtIdJenis = New TextBox()
+        txtJenis = New TextBox()
+        txtSearch = New TextBox()
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
-        txtIdJenis = New TextBox()
-        txtJenisBuku = New TextBox()
-        txtSearch = New TextBox()
         btnSimpan = New Button()
         btnUbah = New Button()
         btnHapus = New Button()
         btnBatal = New Button()
-        dgvJenisBuku = New DataGridView()
+        dgvJenis = New DataGridView()
         ErrorProvider1 = New ErrorProvider(components)
-        CType(dgvJenisBuku, ComponentModel.ISupportInitialize).BeginInit()
+        btnForm2 = New Button()
+        CType(dgvJenis, ComponentModel.ISupportInitialize).BeginInit()
         CType(ErrorProvider1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
+        ' 
+        ' txtIdJenis
+        ' 
+        txtIdJenis.Location = New Point(207, 76)
+        txtIdJenis.MaxLength = 5
+        txtIdJenis.Name = "txtIdJenis"
+        txtIdJenis.PlaceholderText = "Kode Jenis"
+        txtIdJenis.Size = New Size(146, 23)
+        txtIdJenis.TabIndex = 0
+        ' 
+        ' txtJenis
+        ' 
+        txtJenis.Location = New Point(207, 124)
+        txtJenis.Name = "txtJenis"
+        txtJenis.PlaceholderText = "Jenis"
+        txtJenis.Size = New Size(146, 23)
+        txtJenis.TabIndex = 1
+        ' 
+        ' txtSearch
+        ' 
+        txtSearch.Location = New Point(207, 174)
+        txtSearch.Name = "txtSearch"
+        txtSearch.PlaceholderText = "Search"
+        txtSearch.Size = New Size(146, 23)
+        txtSearch.TabIndex = 2
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(12, 30)
+        Label1.Location = New Point(104, 79)
         Label1.Name = "Label1"
         Label1.Size = New Size(46, 15)
-        Label1.TabIndex = 0
+        Label1.TabIndex = 3
         Label1.Text = "ID Jenis"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(12, 75)
+        Label2.Location = New Point(104, 127)
         Label2.Name = "Label2"
         Label2.Size = New Size(62, 15)
-        Label2.TabIndex = 1
+        Label2.TabIndex = 4
         Label2.Text = "Jenis Buku"
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(12, 119)
+        Label3.Location = New Point(104, 177)
         Label3.Name = "Label3"
-        Label3.Size = New Size(55, 15)
-        Label3.TabIndex = 2
-        Label3.Text = "Cari Data"
-        ' 
-        ' txtIdJenis
-        ' 
-        txtIdJenis.Location = New Point(125, 27)
-        txtIdJenis.Name = "txtIdJenis"
-        txtIdJenis.Size = New Size(264, 23)
-        txtIdJenis.TabIndex = 3
-        ' 
-        ' txtJenisBuku
-        ' 
-        txtJenisBuku.Location = New Point(125, 72)
-        txtJenisBuku.Name = "txtJenisBuku"
-        txtJenisBuku.Size = New Size(264, 23)
-        txtJenisBuku.TabIndex = 4
-        ' 
-        ' txtSearch
-        ' 
-        txtSearch.Location = New Point(125, 116)
-        txtSearch.Name = "txtSearch"
-        txtSearch.Size = New Size(264, 23)
-        txtSearch.TabIndex = 5
+        Label3.Size = New Size(58, 15)
+        Label3.TabIndex = 5
+        Label3.Text = "Cari Buku"
         ' 
         ' btnSimpan
         ' 
-        btnSimpan.Location = New Point(12, 156)
+        btnSimpan.Location = New Point(104, 232)
         btnSimpan.Name = "btnSimpan"
         btnSimpan.Size = New Size(75, 23)
         btnSimpan.TabIndex = 6
@@ -98,7 +103,7 @@ Partial Class Form1
         ' 
         ' btnUbah
         ' 
-        btnUbah.Location = New Point(110, 156)
+        btnUbah.Location = New Point(185, 232)
         btnUbah.Name = "btnUbah"
         btnUbah.Size = New Size(75, 23)
         btnUbah.TabIndex = 7
@@ -107,7 +112,7 @@ Partial Class Form1
         ' 
         ' btnHapus
         ' 
-        btnHapus.Location = New Point(213, 156)
+        btnHapus.Location = New Point(266, 232)
         btnHapus.Name = "btnHapus"
         btnHapus.Size = New Size(75, 23)
         btnHapus.TabIndex = 8
@@ -116,60 +121,71 @@ Partial Class Form1
         ' 
         ' btnBatal
         ' 
-        btnBatal.Location = New Point(314, 156)
+        btnBatal.Location = New Point(347, 232)
         btnBatal.Name = "btnBatal"
         btnBatal.Size = New Size(75, 23)
         btnBatal.TabIndex = 9
         btnBatal.Text = "Batal"
         btnBatal.UseVisualStyleBackColor = True
         ' 
-        ' dgvJenisBuku
+        ' dgvJenis
         ' 
-        dgvJenisBuku.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvJenisBuku.Location = New Point(12, 189)
-        dgvJenisBuku.Name = "dgvJenisBuku"
-        dgvJenisBuku.Size = New Size(377, 183)
-        dgvJenisBuku.TabIndex = 10
+        dgvJenis.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvJenis.Location = New Point(136, 261)
+        dgvJenis.Name = "dgvJenis"
+        dgvJenis.Size = New Size(240, 150)
+        dgvJenis.TabIndex = 10
         ' 
         ' ErrorProvider1
         ' 
         ErrorProvider1.ContainerControl = Me
         ' 
+        ' btnForm2
+        ' 
+        btnForm2.Location = New Point(421, 110)
+        btnForm2.Name = "btnForm2"
+        btnForm2.Size = New Size(75, 23)
+        btnForm2.TabIndex = 11
+        btnForm2.Text = "Form 2"
+        btnForm2.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(403, 384)
-        Controls.Add(dgvJenisBuku)
+        ClientSize = New Size(519, 450)
+        Controls.Add(btnForm2)
+        Controls.Add(dgvJenis)
         Controls.Add(btnBatal)
         Controls.Add(btnHapus)
         Controls.Add(btnUbah)
         Controls.Add(btnSimpan)
-        Controls.Add(txtSearch)
-        Controls.Add(txtJenisBuku)
-        Controls.Add(txtIdJenis)
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
+        Controls.Add(txtSearch)
+        Controls.Add(txtJenis)
+        Controls.Add(txtIdJenis)
         Name = "Form1"
-        Text = "Form1"
-        CType(dgvJenisBuku, ComponentModel.ISupportInitialize).EndInit()
+        Text = "Data Perpustakaan"
+        CType(dgvJenis, ComponentModel.ISupportInitialize).EndInit()
         CType(ErrorProvider1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
+    Friend WithEvents txtIdJenis As TextBox
+    Friend WithEvents txtJenis As TextBox
+    Friend WithEvents txtSearch As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents txtIdJenis As TextBox
-    Friend WithEvents txtJenisBuku As TextBox
-    Friend WithEvents txtSearch As TextBox
     Friend WithEvents btnSimpan As Button
     Friend WithEvents btnUbah As Button
     Friend WithEvents btnHapus As Button
     Friend WithEvents btnBatal As Button
-    Friend WithEvents dgvJenisBuku As DataGridView
+    Friend WithEvents dgvJenis As DataGridView
     Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents btnForm2 As Button
 
 End Class
