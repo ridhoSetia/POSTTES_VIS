@@ -5,7 +5,7 @@
     Dim semester As Integer
 
     Private Sub ValidateInput()
-        If Double.TryParse(inputIPS.Text, ips) Then
+        If Double.TryParse(inputIPS.Text.Replace(".", ","), ips) Then
 
         Else
             MessageBox.Show("Input harus berupa angka")
@@ -19,6 +19,7 @@
             Return
         End If
         semester += 1
+        MessageBox.Show("IP Semester " & semester & " : " & ips)
         ipTotal += ips
         ipk = ipTotal / semester
         inputIPK.Text = ipk
@@ -41,5 +42,4 @@
         ipk = 0
         inputIPK.Text = ""
     End Sub
-
 End Class
